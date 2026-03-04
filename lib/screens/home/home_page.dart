@@ -7,6 +7,7 @@ import 'package:culinara/widgets/bottom_nav_bar.dart';
 import 'package:culinara/models/recipe.dart';
 import 'package:culinara/recipe_detail_page.dart';
 import 'package:culinara/randomizer_page.dart';
+import '../settings/settings_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -292,6 +293,9 @@ class _HomePageState extends State<HomePage> {
         break;
       case 3:
         content = RandomizerPage(recipes: recipes);
+        break;
+      case 4:
+        content = const SettingsPage();
         break;
       default:
         content = Center(child: Text('Not implemented', style: GoogleFonts.fredoka(fontWeight: FontWeight.bold)));
